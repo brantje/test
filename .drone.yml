@@ -14,4 +14,3 @@ pipeline:
 matrix:
   include:
     - TESTS: verified-check
-
