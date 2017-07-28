@@ -2,7 +2,7 @@ pipeline:
   clone:
     image: plugins/git
     depth: 1
-  signed-off-check:
+  verified-check:
     image: python
     commands:
       - wget https://raw.githubusercontent.com/brantje/passman-ci/master/verified-check.py
@@ -10,8 +10,8 @@ pipeline:
       - python ./verified-check.py
     when:
       matrix:
-        TESTS: signed-off-check
+        TESTS: verified-check
 matrix:
   include:
-    - TESTS: signed-off-check
+    - TESTS: verified-check
 
