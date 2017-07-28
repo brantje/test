@@ -6,7 +6,7 @@ pipeline:
     image: python
     commands:
       - wget https://raw.githubusercontent.com/brantje/passman-ci/master/verified-check.py
-      - python -V
+      - pip install requests json
       - python ./verified-check.py
     when:
       matrix:
