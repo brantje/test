@@ -1,0 +1,14 @@
+pipeline:
+  clone:
+    image: plugins/git
+    depth: 1
+  signed-off-check:
+    commands:
+      - wget https://raw.githubusercontent.com/brantje/passman-ci/master/verified-check.py
+      - python ./verified-check.py
+    when:
+      matrix:
+        TESTS: signed-off-check
+matrix:
+  include:
+    - TESTS: signed-off-check
