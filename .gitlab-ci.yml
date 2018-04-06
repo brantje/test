@@ -10,3 +10,6 @@ deploy-to-github:
   - chmod 700 ~/.ssh  
   - git status
   - git remote -v
+  - git remote add github $REMOTE_GIT
+  - git fetch github
+  - git push -f origin github master
