@@ -20,5 +20,5 @@ deploy-to-github:
     - git remote add github $REMOTE_GIT
     - git remote -v
     - git fetch github
-    # - git push -f github master
+    - git push -f github master
     
