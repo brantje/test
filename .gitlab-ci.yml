@@ -10,7 +10,7 @@ before_script:
   - chmod 700 ~/.ssh    
   - ls ~/.ssh
   
-  script:
+script:
   - git status
   - git remote -v
   - git remote add github $REMOTE_GIT
