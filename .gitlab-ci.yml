@@ -14,5 +14,5 @@ deploy-to-github:
     - git checkout master
     - git pull --all
     - git merge github/master -X ours
-    - git push --all
+    - git push github master
     
