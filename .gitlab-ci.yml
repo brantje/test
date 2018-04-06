@@ -1,0 +1,7 @@
+deploy-to-github:
+  stage: deploy
+  only:
+    - master
+  script:
+    - git status
+    - git remote -v
