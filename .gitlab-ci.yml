@@ -7,18 +7,9 @@ deploy-to-github:
     - 'which ssh-agent || ( apk --update add openssh-client git)'
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    # - mkdir -p ~/.ssh
-    # - chmod 700 ~/.ssh
-    # - echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa
-    # - echo $SSH_PUBLIC_KEY > ~/.ssh/id_rsa.pub
-    # - ls ~/.ssh
-  
+
   script:
-    - ssh-add -l
-    - git status
-    - echo $REMOTE_GIT
     - git remote add github https://$GITHUB_TOKEN:x-oauth-basic@github.com/$REPO.git
-    - git remote -v
     - git fetch github
-    - git push -f github master
+    - git push github master
     
