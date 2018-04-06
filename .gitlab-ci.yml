@@ -1,4 +1,6 @@
+
 deploy-to-github:
+  image: alpine:latest
   stage: deploy
   only:
     - master
