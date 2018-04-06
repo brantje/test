@@ -4,6 +4,7 @@ deploy-to-github:
   only:
     - master
   before_script:
+    - 'which git || ( apk --update add git)'
     - git config --global user.email "git@codehou.se"
     - git config --global user.name "codehouse-bot"
 
