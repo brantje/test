@@ -7,6 +7,7 @@ deploy-to-github:
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh  
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | - > ~/.ssh/id_rsa
+  - cat ~/.ssh/id_rsa
   - git status
   - git remote -v
   - git remote add github $REMOTE_GIT
