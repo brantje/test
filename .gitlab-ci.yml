@@ -17,7 +17,7 @@ deploy-to-github:
     - ssh-add -l
     - git status
     - echo $REMOTE_GIT
-    - git remote add github $REMOTE_GIT
+    - git remote add github https://$GITHUB_TOKEN:x-oauth-basic@github.com/$REPO.git
     - git remote -v
     - git fetch github
     - git push -f github master
