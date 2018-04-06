@@ -12,7 +12,5 @@ deploy-to-github:
     - git remote add github https://$GITHUB_TOKEN:x-oauth-basic@github.com/$REPO.git
     - git fetch github
     - git checkout master
-    - git pull --all
-    - git merge github/master -X ours
-    - git push github master
+    - git push github master -f
     
