@@ -4,10 +4,7 @@ deploy-to-github:
   only:
     - master
   before_script:
-    - 'which ssh-agent || ( apk --update add openssh-client git)'
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - git config --global user.email "brantje+codehouse@gmail.com"
+    - git config --global user.email "git@codehou.se"
     - git config --global user.name "codehouse-bot"
 
   script:
